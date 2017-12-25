@@ -1,0 +1,44 @@
+<!--pages/recommend/recommend.wxml-->
+<view class="container">
+  <view class="tab-list">
+    <text class="main-title {{currentTab==index ? 'active' : ''}}" wx:for="{{tabArr}}" data-idx="{{index}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>
+  <!--推送列表-->
+  <view class="myrec" hidden="{{currentTab!==0}}">
+    <view class="rec-list" wx:for="{{list}}" wx:for-item="item" data-ben='{{item}}' bindtap='jump'>
+      <image class="rec-img" src="http://images.sw2025.com{{item.showimage}}"></image>
+      <view class="rec-rt">
+        <view class="rec-rt-top">
+          <text class="rec-name">{{item.enterprisename}}</text>
+          <view class="rec-sub-tit">{{item.brief}}</view>
+        </view>
+        <view class="rec-rt-bottom">
+          <text class="label">{{item.domain2}}</text>
+          <text class="rec-time">{{item.created_at}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+ <!--我的办事-->
+  <view class="myeve" hidden="{{currentTab!==1}}">
+    <view class="jun-list">
+      <text class="jun-title {{crt==index ? 'active' : ''}}" wx:for="{{junArr}}" data-idx="{{index}}" wx:key="unique" bindtap="juniorTap">{{item}}</text>
+    </view>
+    <view class="jun-box">
+      <view class="rec-list" wx:for="{{list}}" wx:for-item="item" data-ben='{{item}}' bindtap='jump'>
+        <image class="rec-img" src="http://images.sw2025.com{{item.showimage}}"></image>
+        <view class="rec-rt">
+          <view class="rec-rt-top">
+            <text class="rec-name">{{item.enterprisename}}</text>
+            <view class="rec-sub-tit">{{item.brief}}</view>
+          </view>
+          <view class="rec-rt-bottom">
+            <text class="label">{{item.domain2}}</text>
+            <text class="rec-time">{{item.created_at}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+<view class="filter" hidden="{{hidden}}">您暂时没有办事信息</view>
+</view>

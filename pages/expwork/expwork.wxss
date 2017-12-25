@@ -1,0 +1,2 @@
+/* pages/expwork/expwork.wxss */
+@import "../details/details.wxss";

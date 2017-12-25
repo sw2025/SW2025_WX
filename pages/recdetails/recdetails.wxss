@@ -1,0 +1,40 @@
+/* pages/recdetails/recdetails.wxss */
+.main{
+  padding: 0 24rpx;
+}
+.rec-pic{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+.rec-row-rt{
+  float: right;
+}
+.rec-row{
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+.rec-row-rt{
+  color: #666;
+}
+.rec-row-details{
+  color: #666;
+  margin-top: 24rpx;
+  line-height: 1.5;
+  text-align: justify;
+}
+.label{
+  border: 1px solid #00a7ed;
+  display: inline-block;
+  padding: 0 14rpx;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  height: 34rpx;
+  line-height: 32rpx;
+  color: #00a7ed;
+  margin-top: 28rpx;
+  margin-bottom: 40rpx;
+}
+.btns{
+  padding: 0 0 40rpx;
+}

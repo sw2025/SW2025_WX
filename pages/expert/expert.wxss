@@ -1,0 +1,98 @@
+/* pages/expert/expert.wxss */
+.container {
+  background: #fff;
+  padding: 0 40rpx;
+}
+
+.row {
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #eee;
+  position: relative;
+  color: #666;
+}
+
+.oh {
+  overflow: hidden;
+}
+
+.exp-name {
+  float: left;
+  height: 1.4rem;
+  line-height: 1.4rem;
+}
+
+.exp-name, .exp-type, .exp-lt {
+  color: #333;
+  display: inline-block;
+  width: 5em;
+}
+
+.limit-hei{height: 50rpx;
+  line-height: 50rpx;
+}
+
+.picker {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.exp-intro {
+  position: absolute;
+  top: 30rpx;
+  left: 0;
+  color: #333;
+}
+
+.up-title{
+  color: #333;
+}
+
+.exp-intro text {
+  width: 2em;
+  display: inline-block;
+}
+
+.intro-desc {
+  padding-left: 5em;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: justify;
+  word-break: break-all;
+}
+
+.upload {
+  margin-top: 20rpx;
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 340rpx;
+  /* background-image: url(../images/uploadplus.png); */
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.upload-img {
+  width: auto;
+  height: 340rpx;
+  margin: 0 auto;
+  display: block;
+}
+
+.noborder {
+  border-bottom: none;
+}
+
+.verity {
+  padding: 30rpx 0;
+}
+
+.sub-btn {
+  background: #4a4c5b;
+  color: #fff;
+}
+
+.arrow{
+  top: 16rpx;
+}
+.hadhide:nth-child(5){
+   display: none; 
+}

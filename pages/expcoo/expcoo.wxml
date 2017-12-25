@@ -1,0 +1,43 @@
+<!--pages/expcoo/expcoo.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container">
+  <view class="cooperate">
+    <text class="coo-tit">{{processname}}</text>
+    <view class="coo-desc">{{processdescription}}</view>
+    <view class="coo-desc2">
+      <template is="wxParse" data="{{wxParseData:template.nodes}}" />
+    </view>
+    <view class="coo-btns">
+      <button class="solid working-btn" wx:if="{{step==2 && len==2}}" bindtap="uploadFile">上传资料</button>
+      <button class="solid working-btn" wx:else bindtap="downloadFile">下载资料</button>
+      <button class="solid working-btn confirms" wx:if="{{((step==1) || (step == 3)) && step == len }}" bindtap="confirmRes">确认资料</button>
+      <button class="hollow working-btn" bindtap="addOpinion" wx:if="{{((step==1) || (step == 3)) && step == len }}">新增意见</button>
+      <button class="hollow working-btn" bindtap="lookTap" wx:else>查看意见</button>
+      <view class="tishi">注：上传资料时只能上传图片，如需上传其他格式文件，请在WEB端或者APP上进行操作</view>
+      <view class="stopconnect" wx:if="{{step==len}}" bindtap="stopPart">终止合作</view>
+      <!-- <image class="up-img " wx:if="{{step==1||step==3}} " src="http://images.sw2025.com{{picture}} "></image> -->
+    </view>
+  </view>
+  <view class="opinions" hidden="{{look}}">
+    <image class="trigular" src="../images/triangular.png"></image>
+    <view class="nopinion" wx:if="{{remarkInfo.length == 0}}">暂无意见</view>
+    <view wx:else>
+      <view class="opinion" wx:for="{{remarkInfo}}" wx:for-item="remark">
+        <view class="remark-top">
+          <text class="remark-user">{{remark.adduser}}</text>
+          <text class="remark-time">{{remark.addtime}}</text>
+        </view>
+        <view class="remark-con">{{remark.content}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="cover" hidden="{{hide}}" bindtap="hideMark"></view>
+<view class="remarks" hidden="{{hide}}">
+  <form bindsubmit="bindFormSubmit">
+    <textarea maxlength="500" class="remark-reason" placeholder="请输入终止合作原因" name="textarea" value="{{str}}" />
+    <view class="rem-btn">
+      <button type="primary" class="publish" form-type="submit">发表</button>
+    </view>
+  </form>
+</view>

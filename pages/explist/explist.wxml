@@ -1,0 +1,42 @@
+<!--pages/explist/explist.wxml-->
+<view class="container">
+  <form bindsubmit="bindFormSubmit">
+    <view class="btns2">
+      <button class="desc-btn cancel" bindtap="cacelTap">取消</button>
+      <button class="desc-btn finish" form-type="submit">完成</button>
+    </view>
+    <view class="main">
+      <view class="senior">
+        <text wx:for="{{senior}}" data-idx="{{index}}" class="senior-item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="tabTap">{{item}}</text>
+      </view>
+      <view class="good-row" hidden="{{currentTab!==0}}">
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox" wx:for="{{junior0}}">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          </label>
+        </checkbox-group>
+      </view>
+      <view class="good-row" hidden="{{currentTab!==1}}">
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox" wx:for="{{junior1}}">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          </label>
+        </checkbox-group>
+      </view>
+      <view class="good-row" hidden="{{currentTab!==2}}">
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox" wx:for="{{junior2}}">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          </label>
+        </checkbox-group>
+      </view>
+      <view class="good-row" hidden="{{currentTab!==3}}">
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox" wx:for="{{junior3}}">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+  </form>
+</view>

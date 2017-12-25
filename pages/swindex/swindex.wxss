@@ -1,0 +1,26 @@
+/**index.wxss**/
+page {
+  height: 100%;
+}
+.match{
+  padding-bottom: 36rpx;
+  position: relative;
+  font-size: 24rpx;
+  line-height: 1.8;
+}
+.system{
+  width: calc(100% - 40rpx - 4em);
+  text-align: center;
+}
+.appoint{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.mytips{
+  padding-top: 40rpx;
+  text-align: justify;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  color: #fc5454;
+}

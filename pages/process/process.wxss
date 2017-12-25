@@ -1,0 +1,41 @@
+/* pages/process/process.wxss */
+.process{
+  background: #fff;
+  margin: 0 0 24rpx;
+  padding: 24rpx;
+}
+.pro-desc{
+  text-align: justify;
+  line-height: 48rpx;
+  word-break: break-all;
+  margin-bottom: 10rpx;
+}
+.pro-botm{
+  overflow: hidden;
+}
+.pro-state{
+  float: left;
+  color: #00a7ed;
+}
+.pro-time{
+  float: right;
+  color: #999;
+}
+.add{
+  position: fixed;
+  bottom: 40rpx;
+  right: 50rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.finishall{
+  overflow: hidden;
+  padding: 20rpx 0;
+}
+.complete{
+  background: #4a4c5b;
+  color: #fff;
+  width: 99%;
+  margin: 0 auto;
+  line-height: 2;
+}

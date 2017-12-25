@@ -1,0 +1,28 @@
+/* pages/explist/explist.wxss */
+
+.main {
+  padding: 0 24rpx;
+  margin-top: 30rpx;
+}
+
+.checkbox {
+  display: block;
+  margin: 20rpx 40rpx;
+}
+
+.senior{
+  overflow: hidden;
+}
+
+.senior-item{
+  display: block;
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.active{
+  background: #00a7ed;
+  color: #fff;
+  border-radius: 6rpx;
+}

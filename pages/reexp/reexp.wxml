@@ -1,0 +1,50 @@
+<!--pages/reexp/reexp.wxml-->
+<view class="container">
+  <view class="ver-state">
+    <image class="ver-state-img" src="{{src}}"></image>
+    {{state}}
+    <view class="hide {{reason}}">拒绝原因</view>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="row">
+      <text class="exp-name oh">专家名称</text>
+      <text class="name-inp">{{expert.expertname}}</text>
+    </view>
+    <view class="row">
+      <text class="exp-name oh">专家类别</text>
+      <text class="name-inp">{{expert.category}}</text>
+    </view>
+    <view class="row">
+      <text class="exp-name oh">擅长问题</text>
+      <text class="name-inp">{{expert.domain1}}-{{expert.domain2}}</text>
+    </view>
+    <view class="row hide">
+      <text class="exp-name oh">擅长行业</text>
+      <text class="name-inp">{{expert.industry}}</text>
+    </view>
+    <view class="row">
+      <text class="exp-name oh">服务地区</text>
+      <text class="name-inp">{{expert.address}}</text>
+    </view>
+    <view class="row">
+      <view class="exp-intro">介
+        <text></text>绍</view>
+      <view class="intro-desc">{{expert.brief}}</view>
+    </view>
+    <view class="row">
+      <text class="up-title">上传凭证</text>
+      <view class="upload">
+        <image class="upload-img" mode="aspectFit" src="http://images.sw2025.com{{expert.licenceimage}}"></image>
+      </view>
+    </view>
+    <view class="row noborder">
+      <text class="up-title">上传宣传照片</text>
+      <view class="upload">
+        <image class="upload-img" mode="aspectFit" src="http://images.sw2025.com{{expert.showimage}}"></image>
+      </view>
+    </view>
+    <view class="verity">
+      <button formType="submit" class="sub-btn {{bgcolor}}" bindtap="reVerify">{{btnHtml}}</button>
+    </view>
+  </form>
+</view>

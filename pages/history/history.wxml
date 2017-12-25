@@ -1,0 +1,17 @@
+<!--pages/history/history.wxml-->
+<view class="container">
+  <text class="main-title">我的发布历史</text>
+  <view class="filter" hidden="{{hidden}}">您暂时未发布过办事需求</view>
+  <view class="his-list" wx:for="{{list}}" wx:for-item="item">
+    <navigator class="his-item" url='../details/details?id={{item.eventid}}'>
+      <view class="his-item-top">
+        <view class="his-item-tit"><text class="his-tit-main">{{item.domain1}}</text><text class="label">{{item.domain2}}</text></view>
+        <text class="his-item-state">{{item.name}}</text>
+      </view>
+      <view class="his-item-time">
+        <image src="../images/icon_clock.png" class="his-item-clock"></image>{{item.created_at}}</view>
+      <view class="his-item-desc">{{item.brief}}</view>
+    </navigator>
+    
+  </view>
+</view>

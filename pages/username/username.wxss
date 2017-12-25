@@ -1,0 +1,11 @@
+/* pages/username/username.wxss */
+.usernameinput{
+  background: #fff;
+  margin: 20rpx 0;
+  padding: 30rpx 20rpx;
+}
+.sureButton{
+  background: #4a4c5b;
+  color: #fff;
+  margin: 200rpx 40rpx 0;
+}

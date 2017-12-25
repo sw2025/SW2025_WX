@@ -1,0 +1,17 @@
+<!--pages/process/process.wxml-->
+<view class="container">
+  <view class="finishall">
+    <button class="complete" bindtap="finishAll">完成</button>
+  </view>
+  <view class="process" bindtap="stateTap" wx:for="{{task}}" wx:for-item="item" wx:for-index="idx" data-state="{{item.state}}" data-etid="{{item.etid}}">
+    <view class="pro-desc">
+      {{item.taskname}}
+    </view>
+    <view class="pro-botm">
+      <text class="pro-state" wx:if="{{item.state == 0}}">进行中</text>
+      <text class="pro-state" wx:else="{{item.state == 1}}">已完成</text>
+      <text class="pro-time">{{item.addtime}}</text>
+    </view>
+  </view>
+  <image bindtap="addTap" src="../images/uploadplus.png" class="add"></image>
+</view>

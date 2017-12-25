@@ -1,0 +1,36 @@
+/* pages/counts/counts.wxss */
+.context{
+  padding: 30rpx 24rpx;
+  background: #fff;
+  margin-top: 30rpx;
+}
+.counts-cap{
+  display: block;
+  padding: 0 0 40rpx;
+}
+.lamp{
+  border-bottom: 1rpx solid #eee;
+  padding: 10rpx 0 4rpx;
+  position: relative;
+  font-size: 44rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.unit{
+  position: absolute;
+  right: 0;
+  top: 16rpx;
+  width: 1em;
+  font-size: 28rpx;
+}
+.sum-money{
+  padding: 30rpx 0 10rpx;
+}
+.red{
+  color: red;
+}
+.paybtn{
+  background: #00a7ed;
+  color: #fff;
+  margin: 160rpx 40rpx;
+}

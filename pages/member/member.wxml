@@ -1,0 +1,20 @@
+<!--pages/member/member.wxml-->
+<view class='container'>
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="member">
+      <radio value="member" checked="true" />开通会员
+    </label>
+    <view class='level'>
+      <view bindtap='levelTap' class='item {{currentTab==index ? "active" : " "}}' wx:for="{{list}}" data-idx="{{index}}" wx:for-item="item">{{item.title}}</view>
+    </view>
+    <view class='explain'>{{desc}}</view>
+    <view class='line'>
+      <label class="member">
+        <radio value="payMoney" />单次充值
+      </label>
+      <view class='only'>120元/次</view>
+      <view class='explain'>赠送60分钟视频通话时长</view>
+    </view>
+    <button class='paybtn' bindtap='payConfirm'>确认支付 ￥{{amount}}</button>
+  </radio-group>
+</view>

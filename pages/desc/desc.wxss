@@ -1,0 +1,37 @@
+/* pages/desc/desc.wxss */
+
+.desc-btn {
+  padding: 0 60rpx;
+  margin-top: 60rpx;
+  line-height: 1.8;
+}
+.cancel {
+  float: left;
+  color: #666;
+  margin-left: 40rpx;
+}
+
+.finish {
+  float: right;
+  margin-right: 40rpx;
+}
+
+.txt-box {
+  margin: 40rpx;
+  background: #fff;
+  min-height: 300rpx;
+  padding: 20rpx;
+  border-radius: 6rpx;
+  box-shadow: 0 0 10rpx #ddd;
+}
+
+.txt {
+  width: 100%;
+  text-align: justify;
+}
+
+.limit-count{
+  font-size: 26rpx;
+  color: #999;
+  padding: 0 48rpx;
+}

@@ -1,0 +1,160 @@
+/* pages/cooperate/cooperate.wxss */
+@import "../../wxParse/wxParse.wxss";
+.container{
+  padding: 30rpx 24rpx;
+}
+.cooperate{
+  background: #fff;
+  margin: 0 0 40rpx;
+  padding: 0 24rpx;
+  border-radius: 8rpx;
+  position: relative;
+}
+.coo-tit{
+  display: block;
+  padding: 24rpx 0;
+  text-align: center;
+}
+.coo-desc{
+  text-align: justify;
+  margin-bottom: 10rpx;
+  line-height: 56rpx;
+}
+.coo-desc2{
+  font-size: 28rpx;
+  color: #666;
+  line-height: 48rpx;
+  text-align: justify;
+}
+.coo-desc2 text{
+  display: block;
+}
+.coo-btns{
+  overflow: hidden;
+  padding: 24rpx 0;
+}
+.working-btn{
+  width: 33%;
+  line-height: 2;
+  font-size: 32rpx;
+}
+.solid{
+  float: left;
+  background: #00a7ed;
+  color: #fff;
+}
+.hollow{
+  float: right;
+  background: #fff;
+  border: 1px solid #00a7ed;
+}
+.opinions{
+  font-size: 28rpx;
+  background: #fff;
+  position: relative;
+  padding: 0 30rpx;
+  border-radius: 8rpx;
+  overflow: visible;
+}
+.trigular{
+  position: absolute;
+  top: -26rpx;
+  right: 112rpx;
+  width: 40rpx;
+  height: 40rpx;
+  z-index: 10;
+}
+.nopinion{
+  padding: 30rpx 0;
+}
+.opinion{
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding: 20rpx 0;
+}
+.opinion:last-child{
+  border-bottom:none;
+}
+.remark-top{
+  overflow: hidden;
+}
+.remark-user{
+  float: left;
+  width: calc(100% - 12em);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.remark-time{
+  float: right;
+  width: 12em;
+  color: #666;
+  text-align: right;
+}
+.remark-con{
+  text-align: justify;
+  margin-top: 20rpx;
+  word-break: break-all;
+}
+.stop{
+  color: #ed0021;
+  line-height: 1.8;
+  font-size: 24rpx;
+  width: 160rpx;
+  position: absolute;
+  bottom: 20rpx;
+  right: 6rpx;
+  background: #fff;
+}
+.stop::after{
+  border: none;
+}
+.tishi{
+  clear: both;
+  font-size: 24rpx;
+  color: #f00;
+  padding: 30rpx 0;
+  text-align: justify;
+  display: block;
+}
+.stopconnect{
+  position: absolute;
+  right: 26rpx;
+  bottom: 20rpx;
+  color: #ed0021;
+  font-size: 28rpx;
+}
+.remarks{
+  background: #fff;
+  border-radius: 10rpx;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 90%;
+  z-index: 4;
+}
+.remark-reason{
+  width: 100%;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  height: 220rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  text-align: justify;
+}
+.rem-btn{
+  overflow: hidden;
+  border-top: 1px solid #eee;
+  padding: 20rpx 0;
+}
+.publish{
+  width: 160rpx;
+  float: right;
+  line-height: 1.8;
+  font-size: 32rpx;
+  margin-right: 20rpx;
+}
+.confirms{
+  float:right;
+  margin-left:0.3%;
+}

@@ -1,0 +1,8 @@
+<!--pages/accountdet/accountdet.wxml-->
+<view class='container'>
+  <view class='bill' wx:for="{{list}}" wx:for-item="item">
+    <text class='bill-cap'>{{item.channel}}</text>
+    <text class='bill-time'>{{item.billtime}}</text>
+    <view class='colorful'>{{item.money}}</view>
+  </view>
+</view>

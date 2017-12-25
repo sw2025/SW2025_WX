@@ -1,0 +1,48 @@
+<!--pages/expert/expert.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <view class="row limit-hei">
+      <text class="exp-name oh">专家名称</text>
+      <input name="expertName" class="name-inp" maxlength="30" placeholder="请输入专家名称" />
+    </view>
+    <view class="row" bindtap="goodAt">
+      <text class="exp-lt">擅长问题</text>
+      <text class="">{{finds}}{{goods}}</text>
+      <!-- <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view class="picker">
+          <text class="exp-lt">擅长问题</text>{{multiArray[0][multiIndex[0]]}}-{{multiArray[1][multiIndex[1]]}}
+          <image src="../images/arrow_down_gray.png" class="arrow"></image>
+        </view>
+      </picker> -->
+    </view>
+    <view class="row limit-hei hadhide" wx:for="{{objArray}}" wx:for-item="item" wx:for-index="idx">
+      <picker class="type-pick" bindchange="bindPicker" value="{{item.index}}" data-current="{{idx}}" range="{{item.option}}">
+        <view class="picker">
+          <text class="exp-lt">{{item.title}}</text>
+          <text class="">{{item.option[item.index]}}</text>
+          <image src="../images/arrow_down_gray.png" class="arrow"></image>
+        </view>
+      </picker>
+    </view>
+    <view class="row">
+      <view class="exp-intro">介
+        <text></text>绍</view>
+      <textarea name="expIntro" bindblur="bindTextAreaBlur" auto-height placeholder="请输入专家介绍" class="intro-desc" />
+    </view>
+    <view class="row noborder">
+      <text class="up-title">上传凭证</text>
+      <view bindtap="bindChooseImage" class="upload" data-type="1">
+        <image class="upload-img" mode="aspectFit" src="{{tempFilePaths}}"></image>
+      </view>
+    </view>
+    <view class="row noborder">
+      <text class="up-title">上传宣传照片</text>
+      <view bindtap="bindChooseImage" class="upload" data-type="2">
+        <image class="upload-img" mode="aspectFit" src="{{businessPath}}"></image>
+      </view>
+    </view>
+    <view class="verity">
+      <button formType="submit" class="sub-btn">提交</button>
+    </view>
+  </form>
+</view>

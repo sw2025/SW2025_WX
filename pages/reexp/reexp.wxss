@@ -1,0 +1,41 @@
+/* pages/reexp/reexp.wxss */
+@import '../expert/expert.wxss';
+
+.name-inp {
+  height: 1.4rem;
+  line-height: 1.4rem;
+}
+
+.red-btn {
+  background: #fc5454;
+}
+
+.ver-state {
+  text-align: center;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.ver-state-img {
+  width: 128rpx;
+  height: 128rpx;
+  display: block;
+  margin: 30rpx auto;
+}
+
+.gray {
+  background: #666;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+  color: #f00;
+  padding: 20rpx 0 0;
+  text-align: justify;
+  line-height: 1.2;
+  text-indent: 2em;
+}

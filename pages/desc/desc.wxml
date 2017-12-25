@@ -1,0 +1,11 @@
+<!--pages/desc/desc.wxml-->
+<view class="container">
+  <form bindsubmit="bindFormSubmit">
+    <view class="txt-box">
+      <textarea maxlength="500" auto-height class="txt" placeholder="请输入需求的描述" name="textarea" value="{{str}}" />
+    </view>
+    <view class='limit-count'>输入字数请在30~500字以内</view>
+    <button class="desc-btn cancel" bindtap="cacelTap">取消</button>
+    <button type="primary" class="desc-btn finish" form-type="submit">完成</button>
+  </form>
+</view>

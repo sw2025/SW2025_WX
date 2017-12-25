@@ -1,0 +1,43 @@
+/* pages/member/member.wxss */
+.level{
+  background: #fff;
+  margin: 30rpx 0 0;
+  overflow: hidden;
+  padding: 30rpx 0;
+}
+.level .active{
+  background: #00a7ed;
+  color: #fff;
+}
+.item{
+  width: 30%;
+  float: left;
+  margin: 0 1.4%;
+  border: 1rpx solid #00a7ed;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+}
+.explain{
+  padding: 30rpx;
+  text-align: justify;
+}
+.paybtn{
+  background: #00a7ed;
+  color: #fff;
+  margin: 100rpx 40rpx;
+}
+.member{
+  padding: 30rpx 30rpx 0;
+  display: block;
+}
+.line{
+  border-top: 1rpx solid #eee;
+}
+.only{
+  background: #fff;
+  padding: 30rpx;
+  margin-top: 30rpx;
+}

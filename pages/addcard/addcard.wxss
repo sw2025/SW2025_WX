@@ -1,0 +1,26 @@
+/* pages/addcard/addcard.wxss */
+.main{
+  background: #fff;
+}
+.row{
+  overflow: hidden;
+  border-bottom: 1rpx solid #eee;
+  padding: 30rpx 24rpx;
+  font-size: 36rpx;
+}
+.row-lt{
+  float: left;
+  width: 5em;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.owner{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+}
+.addcard-btn{
+  margin: 120rpx 30rpx 0;
+  background: #00a7ed;
+  color: #fff;
+}

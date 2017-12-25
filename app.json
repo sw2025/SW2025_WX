@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/swindex/swindex",
+    "pages/counts/counts",
+    "pages/account/account",
+    "pages/addcard/addcard",
+    "pages/accountdet/accountdet",
+    "pages/member/member",
+    "pages/cash/cash",
+    "pages/addopinion/addopinion",
+    "pages/history/history",
+    "pages/expwork/expwork",
+    "pages/details/details",
+    "pages/cooperate/cooperate",
+    "pages/expcoo/expcoo",
+    "pages/process/process",
+    "pages/addpro/addpro",
+    "pages/match/match",
+    "pages/recommend/recommend",
+    "pages/recdetails/recdetails",
+    "pages/desc/desc",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/explist/explist",
+    "pages/enterprise/enterprise",
+    "pages/expert/expert",
+    "pages/reexp/reexp",
+    "pages/reenter/reenter",
+    "pages/username/username",
+    "pages/expdetails/expdetails"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTitleText": "升维",
+    "navigationBarBackgroundColor": "#393a3f",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh":true
+  }
+}

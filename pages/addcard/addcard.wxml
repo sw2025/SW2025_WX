@@ -1,0 +1,24 @@
+<!--pages/addcard/addcard.wxml-->
+<view class='container'>
+<form bindsubmit="formSubmit">
+  <view class='main'>
+    <view class='row'>
+      <text class='row-lt'>持卡人</text>
+      <input name='name' value='{{name}}' class='owner' />
+    </view>
+    <view class='row'>
+      <text class='row-lt'>银行卡号</text>
+      <input name='bankNumber' value='{{bankNumber}}' class='owner' />
+    </view>
+    <view class='row'>
+      <text class='row-lt'>所属银行</text>
+      <input name='bankName' value='{{bankName}}' class='owner' />
+    </view>
+    <view class='row'>
+      <text class='row-lt'>卡开户行</text>
+      <input name='bankSecondName' value='{{bankSecondName}}' class='owner' />
+    </view>
+  </view>
+  <button class='addcard-btn' formType="submit">{{buttonTxt}}</button>
+  </form>
+</view>

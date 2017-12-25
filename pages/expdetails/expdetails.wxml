@@ -1,0 +1,27 @@
+<!--pages/expdetails/expdetails.wxml-->
+<view class="content">
+  <image class="rec-pic" mode="widthFix" src="http://images.sw2025.com{{Object.showimage}}"></image>
+  <view class="main">
+    <view class="rec-row">
+      <text class="rec-row-lt">专家姓名</text>
+      <text class="rec-row-rt">{{Object.expertname}}</text>
+    </view>
+    <view class="rec-row">
+      <text class="rec-row-lt">视频咨询</text>
+      <text class="rec-row-rt">{{money}}</text>
+    </view>
+    <view class="rec-row">
+      <text class="rec-row-lt">专家分类</text>
+      <text class="rec-row-rt">{{Object.category}}</text>
+    </view>
+    <view class="rec-row">
+      <text class="rec-row-lt">入驻时间</text>
+      <text class="rec-row-rt">{{time}}</text>
+    </view>
+    <view class="rec-row">
+      <text class="rec-row-lt">办事详情</text>
+      <view class="rec-row-details">{{Object.brief}}</view>
+    </view>
+    <text class="label">{{Object.domain2}}</text>
+  </view>
+</view>

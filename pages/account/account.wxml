@@ -1,0 +1,15 @@
+<!--pages/account/account.wxml-->
+<view class='container'>
+  <navigator class='money-detail' url='../accountdet/accountdet'>明细</navigator>
+  <view class='myaccount'>
+    <image class='icon-money' src='../images/icon_myremain.png'></image>
+    <text class='myremain'>会员等级</text>
+    <text class='money'>{{typename}}</text>
+    <view class='on-money'>
+      <text class='income'>剩余次数: {{eventcount}}次</text>
+      <text class='outcome'>剩余时间: {{consultcount}}分钟</text>
+    </view>
+    <button class='recharge-btn' bindtap='openMember'>开通会员</button>
+    <button class='charge-btn' bindtap='cashTap'>提现</button>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<!--pages/expwork/expwork.wxml-->
+<view class="container">
+  <view class="working">
+    <image src='../images/4042.jpg' mode='widthFix' class='img'></image>
+    <text class='working-txt'>提示：小程序不支持留言回复和视频互动，用户可以下载APP或通过PC端，查看对方回复和进行视频互动。</text>
+  </view>
+  <!-- <view class="working">
+    <view wx:for="{{working}}" wx:for-item="item" class="working-item" wx:for-index="key" bindtap="workTap" data-lily="{{item}}" data-len="{{len}}">
+      <view class="working-time">
+        <text class="working-dot"></text>{{item.time}}
+      </view>
+      <view class="working-con">
+        <text class="working-tit">{{item.processname}}</text>
+      </view>
+    </view>
+  </view> -->
+</view>

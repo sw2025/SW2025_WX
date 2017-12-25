@@ -1,0 +1,23 @@
+<view class='container'>
+  <view class='card' bindtap='addCard'>
+    <image class='card-img' src='{{src}}'></image>
+    <view class='addcard'>
+      <text class='nocard'>{{bankname}}</text>{{bankcard}}
+    </view>
+    <!-- <view class='addcard' wx:else>
+      <text class='nocard'>{{bankname}}</text>尾号 {{bankcard}} 储蓄卡
+    </view> -->
+  </view>
+  <view class='card-money'>
+    <text class='card-caption'>提现金额</text>
+    <view class='entry'>
+      <text class='unit'>￥</text>
+      <input class='sum' value='{{inpValue}}' type='digit' bindinput="bindKeyInput" auto-focus />
+    </view>
+    <view class='remaining'>
+      <text class='rem-cap'>可用余额 {{balance}} 元</text>
+      <text class='all' bindtap='allCash'>全部提现</text>
+    </view>
+  </view>
+  <button class='apply' bindtap='apply'>申请提现</button>
+</view>

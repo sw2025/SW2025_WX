@@ -1,0 +1,5 @@
+/* pages/recharge/recharge.wxss */
+.tiao{
+  text-align:center;
+  line-height:80rpx;
+}

@@ -1,0 +1,2 @@
+/* pages/expdetails/expdetails.wxss */
+@import "../recdetails/recdetails";

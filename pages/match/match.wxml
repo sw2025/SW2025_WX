@@ -1,0 +1,32 @@
+<!--pages/match/match.wxml-->
+<view class="container">
+  <form bindsubmit="bindFormSubmit">
+    <view class="btns2">
+      <button class="desc-btn cancel" bindtap="cacelTap">取消</button>
+      <button class="desc-btn finish" form-type="submit">完成</button>
+    </view>
+    <view class='filter-condition'>
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view class="picker">
+          <view class='picker-main'>
+            <text class="exp-lt">擅长问题</text>
+            <text class='right-con' wx:if="{{show}}">全部</text>
+            <text class='right-con' wx:else>{{multiArray[0][multiIndex[0]]}}--{{multiArray[1][multiIndex[1]]}}</text>
+            <image src="../images/arrow_down_gray.png" class="arrow"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+    <checkbox-group bindchange="checkboxChange">
+      <view class="checkbox" wx:for="{{list}}" wx:for-item="item">
+        <label class="label-wrapper">
+          <image class="exp-avatar" src="http://images.sw2025.com{{item.showimage}}"></image>
+          <checkbox class="check-btn" value="{{item.expertid}}" checked="{{check}}" />
+        </label>
+        <navigator class="expdetail" url="../expdetails/expdetails?id={{item.expertid}}">
+          <text class="exp-name">{{item.expertname}}</text>
+        </navigator>
+      </view>
+    </checkbox-group>
+  </form>
+</view>

@@ -1,0 +1,147 @@
+/**app.wxss**/
+
+page {
+  font-size: 32rpx;
+  background: #f3f4f5;
+  color: #333;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+}
+
+.nav {
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  padding: 30rpx 0;
+  box-shadow: 0 4rpx 10rpx #ccc;
+}
+
+.avatar {
+  float: left;
+  width: 10%;
+  height: 32rpx;
+}
+
+.avatar-img {
+  height: 32rpx;
+  display: block;
+  width: 26rpx;
+  margin: 0 auto;
+}
+
+.nav-item {
+  float: left;
+  color: #333;
+  width: 22%;
+  text-align: center;
+}
+
+.nav .active {
+  color: #00a7ed;
+  font-size: 32rpx;
+}
+
+.release {
+  margin: 40rpx;
+  background: #fff;
+  box-shadow: 0 0 10rpx #ddd;
+  padding: 40rpx;
+  border-radius: 8rpx;
+}
+
+.picker {
+  position: relative;
+  border-bottom: 1rpx solid #f8f8f8;
+  padding-bottom: 40rpx;
+}
+
+.industry-pick {
+  padding-top: 40rpx;
+}
+
+.arrow {
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  height: 18rpx;
+  width: 30rpx;
+}
+
+.re-desc {
+  padding: 40rpx 0;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+
+.re-btn {
+  background: #4a4c5b;
+  color: #fff;
+  margin: 200rpx 0 0;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.mine {
+  box-shadow: 2rpx 0 10rpx #ccc;
+  width: 70%;
+  height: 100%;
+  background: #fff;
+  font-size: 32rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-120%);
+  z-index: 99;
+}
+
+.user {
+  padding: 64rpx 0;
+  text-align: center;
+  line-height: 30rpx;
+}
+
+.user-img {
+  height: 30rpx;
+  width: 24rpx;
+  margin-right: 8rpx;
+  vertical-align: -4rpx;
+}
+
+.history, .enterprise, .expert {
+  line-height: 100rpx;
+  padding-left: 72rpx;
+}
+.btns2 {
+  overflow: hidden;
+  padding: 20rpx 0;
+  background: #fff;
+  box-shadow: 0 6rpx 12rpx #eee;
+}
+
+.desc-btn {
+  line-height: 1.8;
+  font-size: 32rpx;
+}
+
+.cancel {
+  float: left;
+  color: #666;
+  margin-left: 24rpx;
+}
+
+.finish {
+  float: right;
+  margin-right: 24rpx;
+  background: #4a4c5b;
+  color: #fff;
+}

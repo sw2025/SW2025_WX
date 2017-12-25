@@ -1,0 +1,10 @@
+<!--pages/addpro/addpro.wxml-->
+<view class="container">
+  <form bindsubmit="bindFormSubmit">
+    <view class="txt-box">
+      <textarea maxlength="500" auto-height class="txt" name="textarea" placeholder="请输入日程描述"></textarea>
+    </view>
+    <button class="desc-btn cancel" bindtap="cacelTap">取消</button>
+    <button type="primary" class="desc-btn finish" form-type="submit">完成</button>
+  </form>
+</view>

@@ -1,0 +1,84 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="nav">
+    <view class="avatar" bindtap="slideRight">
+      <image src="../images/icon_user_gray.png" class="avatar-img"></image>
+    </view>
+    <view class="navbar">
+      <text wx:for="{{navbar}}" data-idx="{{index}}" class="nav-item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+    </view>
+  </view>
+  <!--下拉弹出框-->
+  <view class="release">
+    <view class="match">
+      <view class="system"><text>{{caption}}</text><text> {{count}} </text>位专家</view>
+      <view class="appoint" bindtap="appoint">自选专家</view>
+    </view>
+    <form bindsubmit="">
+      <!--定战略-->
+      <view hidden="{{currentTab!==0}}">
+        <picker class="re-pick" bindchange="bindPickerChange" value="{{index0}}" range="{{array0}}">
+          <view class="picker">
+            办事分类：{{array0[index0]}}
+            <image src="../images/arrow_down_gray.png" class="arrow"></image>
+          </view>
+        </picker>
+      </view>
+      <!--找资金-->
+      <view hidden="{{currentTab!==1}}">
+        <picker class="re-pick" bindchange="bindPickerChange" value="{{index1}}" range="{{array1}}">
+          <view class="picker">
+            办事分类：{{array1[index1]}}
+            <image src="../images/arrow_down_gray.png" class="arrow"></image>
+          </view>
+        </picker>
+      </view>
+      <!--找技术-->
+      <view hidden="{{currentTab!==2}}">
+        <picker class="re-pick" bindchange="bindPickerChange" value="{{index2}}" range="{{array2}}">
+          <view class="picker">
+            办事分类：{{array2[index2]}}
+            <image src="../images/arrow_down_gray.png" class="arrow"></image>
+          </view>
+        </picker>
+      </view>
+      <!-- 找市场 -->
+      <view hidden="{{currentTab!==3}}">
+        <picker class="re-pick" bindchange="bindPickerChange" value="{{index3}}" range="{{array3}}">
+          <view class="picker">
+            办事分类：{{array3[index3]}}
+            <image src="../images/arrow_down_gray.png" class="arrow"></image>
+          </view>
+        </picker>
+      </view>
+      <!-- <view class="industry-pick">
+        <picker class="re-pick" bindchange="bindIndustry" value="{{idx}}" range="{{industry}}">
+          <view class="picker">
+            行业：{{industry[idx]}}
+            <image src="../images/arrow_down_gray.png" class="arrow"></image>
+          </view>
+        </picker>
+      </view> -->
+      <view class="re-desc" bindtap="descTap">
+        <text class="">办事描述</text>
+        <view class="re-description">{{str}}</view>
+      </view>
+      <button class="re-btn" form-type="submit" bindtap="releaseTap">请专家办事</button>
+    </form>
+    <view class="mytips">提示：小程序不支持留言回复和视频互动，用户可以下载APP或通过PC端，查看对方回复和进行视频互动。</view>
+  </view>
+  <!-- 头像隐藏内容 -->
+  <view class="cover" hidden="{{myHidden ? true : false}}" catchtap="slideLeft"></view>
+  <view class="mine" animation="{{animationData}}">
+    <view class="user" bindtap="nameviewtap">
+      <view class="user-ava">
+        <image src="../images/icon_user_gray.png" class="user-img"></image>{{nickname}}
+      </view>
+    </view>
+    <view bindtap="history" class="history">历史记录</view>
+    <view bindtap="enterprise" class="enterprise">企业认证</view>
+    <view bindtap="expertTap" class="expert">专家入口</view>
+    <view bindtap="account" class="expert">我的账户</view>
+    <view bindtap="logOut" class="expert">退出</view>
+  </view>
+</view>

@@ -1,0 +1,96 @@
+<!--pages/details/details.wxml-->
+<view class="container">
+  <view wx:if="{{configid==6}}" class="working">
+    <image src='../images/4042.jpg' mode='widthFix' class='img'></image>
+    <text class='working-txt'>提示：小程序不支持留言回复和视频互动，用户可以下载APP或通过PC端，查看对方回复和进行视频互动。</text>
+  </view>
+  <!-- 正在办事 
+  <view wx:if="{{configid==6}}" class="working">
+    <view wx:for="{{working}}" wx:for-item="item" class="working-item" wx:for-index="key" bindtap="workTap" data-lily="{{item}}" data-len="{{len}}">
+      <view class="working-time">
+        <text class="working-dot"></text>{{item.time}}
+      </view>
+      <view class="working-con">
+        <text class="working-tit">{{len-key}}、{{item.processname}}</text>
+      </view>
+    </view>
+  </view>
+  -->
+  <!-- 其他状态 -->
+  <view class="his-item" wx:else>
+    <view class="his-item-state">
+      {{stating}}
+      <view class="times" bindtap="slideLt">
+        <image src="../images/icon_manage.png" class="his-times"></image>
+      </view>
+    </view>
+    <view class="his-item-top">
+      <text class="his-tit-main">{{item.domain1}}</text>
+      <text class="label">{{item.domain2}}</text>
+    </view>
+    <view class="question-desc">问题描述</view>
+    <view class="his-item-desc">{{item.brief}}</view>
+    <!-- 审核未通过 -->
+    <view class="expert-box" wx:if="{{item.configid==3}}">
+      <button class="btn3 work-btn">审核未通过</button>
+      <view class="reason">拒审理由：{{reason}}</view>
+    </view>
+    <!-- 终止合作 -->
+    <view class="expert-box" wx:elif="{{item.configid==9}}">
+      <button class="btn3 work-btn">异常终止</button>
+      <view class="reason">终止理由：{{remark}}</view>
+    </view>
+    <!-- 发出邀请时专家列表 -->
+    <view class="expert-box" wx:elif="{{item.configid==4}}">
+      <text class="b-tit">专家列表</text>
+      <view class="expert-list">
+        <navigator url="../expdetails/expdetails?id={{expitem.expertid}}" class="expert-item" wx:for="{{expList}}" wx:for-item="expitem">
+          <image src="http://images.sw2025.com{{expitem.showimage}}" class="exp-img"></image>
+          <text class="exp-name">{{expitem.expertname}}</text>
+        </navigator>
+      </view>
+      <button class="btn4 work-btn">已邀请 {{inviteCount}} 名专家</button>
+    </view>
+    <!-- 专家响应时选择专家 -->
+    <view class="expert-box" wx:elif="{{item.configid==5}}">
+      <text class="b-tit">选择专家</text>
+      <view class="expert-list">
+        <checkbox-group bindchange="selectExp">
+          <label class="expert-item" wx:for="{{expList}}" wx:for-item="item">
+            <image src="http://images.sw2025.com{{item.showimage}}" class="exp-img"></image>
+            <checkbox class="opt" value="{{item.expertid}}" checked="{{item.checked}}" />
+            <text class="exp-name">{{item.expertname}}</text>
+          </label>
+        </checkbox-group>
+      </view>
+      <button class="btn5 work-btn" bindtap="sureTap">确认选择专家</button>
+    </view>
+    <!-- 评价完成 -->
+    <view class="expert-box" wx:elif="{{configid==8}}">
+      <button class="btn8 work-btn">评价完成</button>
+      <view class="myview-list" hidden="{{explist}}">
+        <text class="view-tit">我的评价</text>
+        <view class="myview" wx:for="{{expList}}" wx:for-item="item">
+          <image src="http://images.sw2025.com{{item.showimage}}" class="myview-pic"></image>
+          <view class="myview-con">
+            <text class="myview-name">企业名字</text>
+            <view class="star">
+              {{item.score}}颗星
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>
+<view class="cover" hidden="{{myHidden ? true : false}}" catchtap="slideRt"></view>
+<view class="time-details" animation="{{animationData}}">
+  <view class="time-list" wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemTime">
+    <text class="order">{{idx+1}}</text>
+    <view class="time-state">
+      <text class="time-name">{{itemTime.name}}</text>
+      <text class="time-verifytime">{{itemTime.eventtime}}</text>
+    </view>
+  </view>
+</view>

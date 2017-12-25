@@ -1,0 +1,12 @@
+<!--pages/counts/counts.wxml-->
+<view class='container'>
+  <view class='context'>
+    <text class='counts-cap'>充值次数</text>
+    <view class='lamp'>
+      <input class='counts' bindinput="bindKeyInput" type='number' value='{{val}}' auto-focus/>
+      <text class='unit'>次</text>
+    </view>
+    <view class='sum-money'>￥ <text class='red'>{{sum}}</text></view>
+  </view>
+  <button class='paybtn' bindtap='payConfirm'>确认支付</button>
+</view>

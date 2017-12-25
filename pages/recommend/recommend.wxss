@@ -1,0 +1,101 @@
+/* pages/recommend/recommend.wxss */
+
+.filter {
+  padding: 40rpx 0 0;
+  text-align: center;
+}
+
+.tab-list,.jun-list {
+  overflow: hidden;
+}
+
+.jun-list{
+  background: #fff;
+  padding: 30rpx 0;
+  margin-bottom: 24rpx;
+}
+
+.main-title {
+  color: #999;
+  display: block;
+  padding: 24rpx 0;
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.jun-title{
+  width: 33.3333%;
+  display: block;
+  float: left;
+  text-align: center;
+}
+.tab-list .active,.jun-list .active{
+  color: #00a7ed;
+}
+
+.rec-list {
+  background: #fff;
+  margin:0 24rpx 24rpx;
+  border-radius: 8rpx;
+  padding: 30rpx 16rpx 20rpx;
+  height: 212rpx;
+  position: relative;
+}
+
+.rec-img {
+  display: block;
+  width: 130rpx;
+  height: 130rpx;
+  position: absolute;
+  top: 30rpx;
+  left: 16rpx;
+}
+
+.rec-rt {
+  margin-left: 146rpx;
+  padding-right: 16rpx;
+}
+
+.rec-name {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+
+.rec-sub-tit {
+  color: #666;
+  text-align: justify;
+  line-height: 44rpx;
+  height: 88rpx;
+  overflow: hidden;
+}
+
+.rec-rt-top {
+  border-bottom: 1rpx solid #eee;
+  height: 156rpx;
+}
+
+.rec-rt-bottom {
+  overflow: hidden;
+  padding-top: 12rpx;
+}
+
+.label {
+  border: 1px solid #00a7ed;
+  display: inline-block;
+  padding: 0 14rpx;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  height: 34rpx;
+  line-height: 32rpx;
+  color: #00a7ed;
+}
+
+.rec-time {
+  float: right;
+  color: #999;
+  font-size: 30rpx;
+  margin-top: 4rpx;
+}

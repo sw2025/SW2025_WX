@@ -1,0 +1,16 @@
+<scroll-view class="regist">
+  <input class="phonenumberInput" type="number" maxlength="11" placeholder="请输入手机号" bindinput="phonenumerInput" focus/>
+  <view class="test-code">
+    <input class="smscodeInput" maxlength="16" placeholder="请输入验证码" bindinput="smscodeInput" />
+    <button class="smscodeButton" hidden="{{before ? true : false}}" bindtap="vcode">点击获取验证码</button>
+    <button class="smscodeButton" hidden="{{after ? true : false}}" bindtap="">{{second}}s 后重新获取</button>
+  </view>
+  <input class="passwordInput" type="password" maxlength="11" placeholder="请输入密码" bindinput="passwordInput" />
+  <picker class="re-pick" bindchange="bindPickerChange" value="{{index}}" range="{{roles}}">
+    <view class="picker">
+      角色：{{roles[index]}}
+      <image src="../images/arrow_down_gray.png" class="arrow"></image>
+    </view>
+  </picker>
+  <button class="registButton" bindtap="registButtonClick">注册</button>
+</scroll-view>

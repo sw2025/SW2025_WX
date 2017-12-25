@@ -1,0 +1,44 @@
+<!--pages/reenter/reenter.wxml-->
+<view class="container">
+  <view class="ver-state">
+    <image class="ver-state-img" src="{{src}}"></image>
+    {{state}}
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="row">
+      <text class="exp-name oh">企业全称</text>
+      <text class="name-inp">{{enterprise.enterprisename}}</text>
+    </view>
+    <view class="row">
+      <text class="exp-name oh">企业规模</text>
+      <text class="name-inp">{{enterprise.size}}</text>
+    </view>
+    <view class="row">
+      <text class="exp-name oh">所在行业</text>
+      <text class="name-inp">{{enterprise.industry}}</text>
+    </view>
+    <view class="row">
+      <text class="exp-name oh">地 区</text>
+      <text class="name-inp">{{enterprise.address}}</text>
+    </view>
+    <view class="row">
+      <view class="exp-intro">介 绍</view>
+      <view class="intro-desc">{{enterprise.brief}}</view>
+    </view>
+    <view class="row">
+      <text class="up-title">上传营业执照</text>
+      <view class="upload">
+        <image class="upload-img" mode="aspectFit" src="http://images.sw2025.com{{enterprise.licenceimage}}"></image>
+      </view>
+    </view>
+    <view class="row noborder">
+      <text class="up-title">上传宣传照片</text>
+      <view class="upload">
+        <image class="upload-img" mode="aspectFit" src="http://images.sw2025.com{{enterprise.showimage}}"></image>
+      </view>
+    </view>
+    <view class="verity">
+      <button formType="submit" class="sub-btn {{bgcolor}}" bindtap="reVerify">{{btnHtml}}</button>
+    </view>
+  </form>
+</view>
