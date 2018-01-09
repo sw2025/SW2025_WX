@@ -276,10 +276,12 @@ Page({
     if (!wx.getStorageSync('isLogin')) {
       this.jumpLogin();
     } else if (this.data.enter.length == 0) {
+      //console.log("jump") ;
       wx.navigateTo({
         url: '../enterprise/enterprise?enterId=' + enterId,
       })
     } else {
+      //console.log("jump02");
       wx.navigateTo({
         url: '../reenter/reenter',
       })
@@ -287,6 +289,7 @@ Page({
   },
   // 专家入口
   expertTap: function () {
+    //console.log(this.data.expert)
     if (!wx.getStorageSync('isLogin')) {
       this.jumpLogin();
     } else if (this.data.expert.length == 0) {

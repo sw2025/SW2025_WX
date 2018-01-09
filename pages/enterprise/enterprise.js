@@ -21,8 +21,7 @@ Page({
 
     pic1: "",
     pic2: "",
-    fromType : "" ,
-
+    fromType: "",
   },
   onLoad: function (options) {
     var that = this;
@@ -32,7 +31,10 @@ Page({
         url: '../login/login',
       });
     }
-    if (options !== null){
+    
+    if (options.fromType !== undefined ){
+      console.log(12321321321313131)
+      console.log(options) ;
       that.data.fromType = options.fromType; // edit
     } 
 

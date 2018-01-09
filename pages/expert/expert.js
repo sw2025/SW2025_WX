@@ -20,9 +20,10 @@ Page({
     ],
     pic1: "",
     pic2: "",
+    fromType: "",
   },
   // 监听页面加载
-  onLoad: function () {
+  onLoad: function (options) {
     wx.removeStorageSync('finds')
     wx.removeStorageSync('goods')
     if (!wx.getStorageSync('isLogin')) {
@@ -30,6 +31,11 @@ Page({
         url: '../login/login',
       });
     } else {
+      if (options.fromType !== undefined) {
+        that.data.fromType = options.fromType; // edit
+      } 
+
+
       var that = this;
       var token = wx.getStorageSync('token');
       wx.request({
@@ -39,7 +45,7 @@ Page({
         },
         method: "POST",
         success: function (res) {
-          if (res.data[0].expert.length == 1) {
+          if (res.data[0].expert.length == 1 && that.data.fromType == "" ) {
             switch (res.data[0].expert[0].configid) {
               case 1:
                 wx.redirectTo({

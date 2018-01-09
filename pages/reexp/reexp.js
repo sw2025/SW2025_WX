@@ -8,10 +8,13 @@ Page({
     bgcolor: '',
     reason:''
   },
+  /**
+   * 重新提交
+   */
   reVerify: function () {
     if (this.data.state !== '正在审核...') {
       wx.navigateTo({
-        url: '../expert/expert',
+        url: '../expert/expert?fromType=edit',
       })
     }
   },
@@ -43,7 +46,7 @@ Page({
             that.data.src = '../images/failure.png'
             that.data.btnHtml = '重新提交'
             that.data.bgcolor = 'red-btn'
-            that.data.reason = 'show'
+            that.data.reason = ''
             break;
           default:
             that.data.state = '认证成功'
